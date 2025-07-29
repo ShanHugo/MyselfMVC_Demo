@@ -1,0 +1,18 @@
+﻿@model ProjectMVC.Models.Projects
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+@if (Model.Id == 1)
+{
+    Html.RenderPartial("Details_MarryWanna", Model);
+}
+else if (Model.Id == 2)
+{
+    Html.RenderPartial("Details_PersonalSite", Model);
+}
+else
+{
+    Html.RenderPartial("Details_Default", Model);
+}

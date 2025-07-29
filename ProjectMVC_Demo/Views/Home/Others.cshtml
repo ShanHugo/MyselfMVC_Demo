@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "額外內容";
+}
+
+<style>
+    body {
+        background: #111418;
+        color: #e0e0e0;
+        font-family: 'Microsoft JhengHei', 'Segoe UI', Arial, sans-serif;
+        line-height: 1.8;
+    }
+
+    .gradient-text-purple-yellow {
+        background: linear-gradient(90deg, #7e5bef, #ffe066);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+    }
+
+    .cert-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .cert-item {
+        width: 45%;
+        max-width: 480px;
+        text-align: center;
+    }
+
+        .cert-item iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 0.7rem;
+            box-shadow: 0 2px 12px #0004;
+            background: #222;
+            margin-bottom: 0.8rem;
+        }
+
+        .cert-item a {
+            font-size: 1.05rem;
+            color: #ffe066;
+            text-decoration: underline;
+            transition: color 0.2s ease-in-out;
+        }
+
+            .cert-item a:hover {
+                color: #ff3cac;
+                text-decoration: none;
+            }
+</style>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <h1 class="gradient-text-purple-yellow">額外內容</h1>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <iframe src="https://www.youtube.com/embed/5vXPzrZd5_Y"
+                            title="Unity 手遊嘗試"
+                            frameborder="0"
+                            allowfullscreen>
+                    </iframe>
+                    <p>
+                        <a href="https://youtu.be/5vXPzrZd5_Y" target="_blank">
+                            Unity 手遊嘗試（YouTube）
+                        </a>
+                    </p>
+                </div>
+                <div class="cert-item">
+                    <iframe src="https://www.youtube.com/embed/LvRUhXcmCH8"
+                            title="學習紀錄"
+                            frameborder="0"
+                            allowfullscreen>
+                    </iframe>
+                    <p>
+                        <a href="https://youtu.be/LvRUhXcmCH8" target="_blank">
+                            學習紀錄（YouTube）
+                        </a>
+                    </p>
+                </div>
+                <div class="cert-item">
+                    <iframe src="https://www.ctee.com.tw/news/20210315700441-431204"
+                            title="媒體報導"
+                            frameborder="0">
+                    </iframe>
+                    <p>
+                        <a href="https://www.ctee.com.tw/news/20210315700441-431204" target="_blank">
+                            媒體報導（CTEE）
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

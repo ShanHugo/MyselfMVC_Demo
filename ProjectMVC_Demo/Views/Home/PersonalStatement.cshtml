@@ -1,0 +1,139 @@
+@{
+    ViewData["Title"] = "關於我";
+}
+
+<style>
+    body {
+        background: #111418; /* 比卡片深一點的淺黑灰，參考 Learn 風格 */
+        color: #e0e0e0;
+        font-family: 'Microsoft JhengHei', 'Segoe UI', Arial, sans-serif;
+        line-height: 1.8;
+    }
+
+    .gradient-text-purple-yellow {
+        background: linear-gradient(90deg, #7e5bef, #ffe066);
+        text-align: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+
+    h3 {
+        color: #ffb6ff;
+        font-weight: 600;
+        border-left: 4px solid #ff3cac;
+        padding-left: 0.7rem;
+        margin-bottom: 1.2rem;
+    }
+
+    strong {
+        color: #ffe066;
+    }
+
+    .bio-section {
+        background: #1e1e1e; /* 方塊灰黑 */
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        margin-bottom: 2.5rem;
+    }
+
+    p {
+        font-size: 1.08rem;
+        margin-bottom: 1.2rem;
+    }
+
+    ul {
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        background: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #ff3cac, #b388ff);
+        border-radius: 4px;
+    }
+</style>
+
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <h1 class="gradient-text-purple-yellow">自傳</h1>
+
+            <div class="bio-section">
+                <h3>自我介紹</h3>
+                <p>
+                    我叫<strong>楊善宇</strong>，畢業於<strong>國立台北科技大學互動設計系</strong>。
+                    在大學求學期間，我一直在探索自己的職涯方向，曾經對於是直接投入業界工作還是繼續深造感到猶豫。
+                    大四時，我特別抽空與班導師深入討論未來的規劃，並了解目前資訊科技與互動設計領域的發展趨勢。
+                    這次交流使我重新審視自己的興趣與專長，並在<strong>兵役結束後</strong>決定朝向研究所發展，
+                    期望在<strong>資訊系統與應用領域</strong>累積更完整的專業知識與實務經驗。
+                </p>
+            </div>
+
+            <div class="bio-section">
+                <h3>學習經歷</h3>
+                <p>
+                    大學期間，雖然課業成績並非班上最突出，但我始終認真對待自己的學習目標。
+                    即使加入<strong>熱舞社</strong>，課業時間受到壓縮，我仍保持自律，從不以社團為藉口忽略學習。
+                    我選修了<strong>物件導向程式設計</strong>與<strong>Unity 基礎程式設計</strong>，
+                    熟悉使用 C# 進行物件導向開發，並能在 Unity 中實作互動式應用程式。
+                    這些課程讓我初步掌握跨領域的整合開發能力，也激發了我對資訊系統更深入探索的興趣。
+                </p>
+                <p>
+                    在大學期間，我完成多個小型 Unity 專案，並在<strong>畢業製作</strong>中與組員開發了以<strong>Kinect、TouchDesigner、Arduino</strong>串接 Unity 的互動專題。
+                    該作品曾嘗試投稿<strong>SIGGRAPH Asia</strong>，雖未入選，但讓我更明確自己的研究方向。
+                </p>
+                <p>
+                    大四時，因成功達成低修標準，我有機會前往<strong>聯想旗下的聯寶電腦實習</strong>。
+                    這段期間，我深入了解一台<strong>伺服器</strong>從研發到上市所需的完整驗證流程，對產業運作有了更實際的認識。
+                    退伍後，我積極<strong>自學資料結構與演算法、ASP.NET Core MVC、SQL Server</strong>等技術，
+                    並善用線上資源持續提升自己的系統開發能力。
+                </p>
+            </div>
+
+            <div class="bio-section">
+                <h3>專業技能</h3>
+                <p>
+                    我熟悉 <strong>MS SQL Server</strong>、<strong>C#</strong>、<strong>ASP.NET Core MVC</strong> 以及 <strong>Unity</strong>，
+                    具備基礎的系統開發與互動應用整合能力。
+                    也因為實習而接觸過 <strong>烙鐵焊接與硬體維修</strong>，讓我對軟硬體整合有初步的理解。
+                </p>
+                <p>
+                    <strong>已取得證照：</strong>
+                    <ul>
+                        <li>電腦硬體裝修乙級</li>
+                        <li>Microsoft SC-900（安全性、合規性與身分識別基礎）</li>
+                        <li>Microsoft DP-900（資料庫與雲端資料基礎）</li>
+                        <li>Microsoft AI-900（人工智慧基礎）</li>
+                        <li>Microsoft AZ-900（Azure 雲端基礎）</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="bio-section">
+                <h3>研究興趣與未來規劃</h3>
+                <p>
+                    若有幸錄取研究所，我希望以<strong>人機互動（HCI, Human-Computer Interaction）</strong>作為主要研究方向。
+                    選擇 HCI 的原因，除了自身熱愛遊戲外，也因為我對人與機器、介面之間的互動方式充滿好奇。
+                    我期望能結合自身程式設計與互動設計專長，研究並優化人機互動體驗，讓科技更貼近人性，
+                    並應用於<strong>遊戲、教育與生活</strong>等領域。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

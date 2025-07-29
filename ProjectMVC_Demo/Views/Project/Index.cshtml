@@ -1,0 +1,108 @@
+﻿@model IEnumerable<ProjectMVC.Models.Projects>
+
+@{
+    ViewData["Title"] = "作品列表";
+}
+
+<style>
+    body {
+        background: #111418; /* 與自傳頁一致的淺黑灰背景 */
+        color: #e0e0e0;
+        font-family: 'Microsoft JhengHei', 'Segoe UI', Arial, sans-serif;
+    }
+
+    h1 {
+        color: #ffe066; /* 與自傳頁的強調色一致 */
+        text-align: center;
+        margin-bottom: 2rem;
+        text-shadow: 0 1px 4px #0006;
+        font-weight: bold;
+    }
+
+    .project-card {
+        background: #1e1e1e; /* 方塊灰黑背景 */
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease-in-out;
+        height: 100%;
+    }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px #0007;
+        }
+
+        .project-card img {
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 6px #0003;
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: contain;
+            background: #000;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-card h5 {
+            color: #ffb6ff; /* 與自傳頁 h3 標題一致 */
+            font-weight: bold;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .project-card p {
+            font-size: 0.9rem;
+            color: #ddd;
+            line-height: 1.5;
+            min-height: 3rem;
+        }
+
+        .project-card small {
+            color: #aaa;
+        }
+
+        .project-card img {
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 6px #0003;
+            width: 100%;
+            height: 200px; /* 固定高度，統一比例 */
+            object-fit: cover; /* 裁切填滿，保持一致視覺 */
+            background: #000;
+            margin-bottom: 0.8rem;
+        }
+
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        background: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #ff3cac, #b388ff);
+        border-radius: 4px;
+    }
+</style>
+
+
+<h1>作品列表</h1>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <a asp-action="Details" asp-route-id="@item.Id" style="text-decoration: none;">
+                    <div class="project-card">
+                        <img src="@item.ImageUrl" alt="@item.Title" />
+                        <h5>@item.Title</h5>
+                        <p>@item.Description</p>
+                        <small>技術：@item.Technical</small><br />
+                        <small>建立日期：@item.CreateDate.ToString()</small>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

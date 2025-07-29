@@ -1,0 +1,194 @@
+﻿@model ProjectMVC.Models.Projects
+
+@{
+    ViewData["Title"] = "個人網站內容";
+}
+
+<style>
+    body {
+        background: #111418;
+        color: #e0e0e0;
+        font-family: 'Microsoft JhengHei', 'Segoe UI', Arial, sans-serif;
+        line-height: 1.8;
+    }
+
+    .gradient-text-purple-yellow {
+        background: linear-gradient(90deg, #7e5bef, #ffe066);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+    }
+
+    .project-detail-card {
+        background: #1e1e1e;
+        padding: 2.5rem 2rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        margin-bottom: 2rem;
+    }
+
+    .image-row {
+        display: flex;
+        justify-content: center;
+        gap: 2rem; /* 圖片間距 */
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    .image-item {
+        text-align: center;
+        width: 30%; /* ✅ 每張圖片約佔 1/3 寬度 */
+        max-width: 300px;
+    }
+
+        .image-item img {
+            width: 100%;
+            aspect-ratio: 4 / 3; /* ✅ 保持一致比例 */
+            object-fit: cover;
+            border-radius: 0.7rem;
+            box-shadow: 0 2px 12px #0004;
+            background: #222;
+            margin-bottom: 0.5rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .image-item img:hover {
+                transform: scale(1.05); /* ✅ Hover 放大效果 */
+            }
+
+        .image-item p {
+            font-size: 0.95rem;
+            color: #e0e0e0;
+            margin: 0;
+        }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #ffb6ff;
+        text-shadow: 0 1px 4px #0006;
+    }
+
+    h3 {
+        color: #ffb6ff;
+        font-weight: 600;
+        border-left: 4px solid #ff3cac;
+        padding-left: 0.7rem;
+        margin-top: 2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    strong {
+        color: #ffe066;
+    }
+
+    p {
+        font-size: 1.08rem;
+        margin-bottom: 1.2rem;
+    }
+
+    ul {
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    img {
+        border-radius: 0.7rem;
+        box-shadow: 0 2px 12px #0004;
+        margin-bottom: 1.2rem;
+        max-width: 100%;
+        background: #222;
+    }
+
+    .punk-green {
+        color: #7e5bef;
+        font-weight: bold;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        background: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #ff3cac, #b388ff);
+        border-radius: 4px;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="project-detail-card">
+                <h1 class="gradient-text-purple-yellow">@Model.Title</h1>
+                <h2>個人作品集網站開發</h2>
+
+                <p>
+                    這是我在<strong>退伍後</strong>花費三個月，從零開始學習 <strong>ASP.NET Core MVC</strong>、
+                    <strong>SQL Server</strong>、<strong>Entity Framework</strong> 等技術，所完成的一份完整作品集網站。
+                    從資料庫設計、後端架構、前端排版到部署測試，全由我獨立完成。
+                </p>
+
+                <h3>開發動機</h3>
+                <p>
+                    我希望能打造一個能夠整合<strong>自傳</strong>、<strong>作品展示</strong>與<strong>聯絡功能</strong>的網站，
+                    作為研究所申請與職涯發展的數位名片。這不只是技術練習，更是我對「資訊系統與應用」領域的探索與實踐。
+                </p>
+
+                <h3>技術架構</h3>
+                <ul>
+                    <li><strong class="punk-green">ASP.NET Core MVC：</strong>負責路由、控制器與資料綁定</li>
+                    <li><strong class="punk-green">Entity Framework：</strong>資料庫操作與模型設計</li>
+                    <li><strong class="punk-green">SQL Server：</strong>儲存作品、自傳與聯絡表單資料</li>
+                    <li><strong class="punk-green">Bootstrap + 自訂 CSS：</strong>打造深色主題與響應式介面</li>
+                </ul>
+
+                <h3>網站功能</h3>
+                <ul>
+                    <li>📄 自傳頁面：分段敘述學習歷程與研究興趣</li>
+                    <li>🖼️ 作品牆：以卡片方式展示多個專案，支援動態連結與詳細頁</li>
+                    <li>📬 聯絡表單：具備資料驗證與資料庫儲存功能</li>
+                    <li>🎨 深色主題：統一視覺風格，提升專業感與可讀性</li>
+                </ul>
+
+                <h3>開發挑戰與突破</h3>
+                <ul>
+                    <li>初期不熟資料庫設計 → 線上課程學習 SQL Server 並實作 Entity Framework Code First</li>
+                    <li>MVC 架構陌生 → 透過線上課程逐步理解 Controller、View、Model 的關係</li>
+                    <li>前端排版不一致 → 自訂 CSS 並參考 Bootstrap 元件，打造一致的深色風格</li>
+                </ul>
+
+                <h3>成果展示</h3>
+                <div class="image-row">
+                    <div class="image-item">
+                        <img src="~/images/projects/personal-site-demo1.png" alt="網站首頁預覽" />
+                        <p>網站首頁預覽</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="~/images/projects/personal-site-demo2.png" alt="作品牆預覽" />
+                        <p>作品牆預覽</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="~/images/projects/personal-site-demo3.png" alt="自傳頁面預覽" />
+                        <p>自傳頁面預覽</p>
+                    </div>
+                </div>
+
+
+                <h3>未來規劃</h3>
+                <p>
+                    我希望能進一步嘗試串接 <strong>Azure 雲端服務</strong> 進行部署與擴充，作為雲端應用的實作練習。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
