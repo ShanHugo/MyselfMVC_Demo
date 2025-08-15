@@ -68,10 +68,11 @@
 
 - 若您想切換成 SQL Server Express 或其他資料庫，可修改 `appsettings.json` 中的連線字串。
 - 若您已安裝 SSMS，也可手動執行 `Data/Init.sql` 或匯入 `Data/ForProject.bak` 進行部署。
+- 資料庫將存放在 `C:\Users\User` 不必要時可刪除。
 
 ---
 
 ## 👨‍💻 作者
 
 楊善宇  
-本專案用於申請資訊所研究所推甄  
+本專案用於申請研究所推甄  
